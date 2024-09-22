@@ -19,7 +19,7 @@ def get_pages(epub_file):
     # unzip the epub file
     extract_epub(epub_file, 'temp')
     # for each html file, get the number of pages
-    html_files = glob.glob('temp/**/*.html', recursive=True)
+    html_files = glob.glob('temp/**/*.*html', recursive=True)
     characters = 0
     for html_file in html_files:
         html = open(html_file, 'r', encoding='utf-8').read()
