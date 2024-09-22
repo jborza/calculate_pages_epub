@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 import zipfile
 
 book_files = glob.glob('**/*.epub', recursive=True)
-print(book_files)
 
 def extract_epub(epub_file, output_dir):
     with zipfile.ZipFile(epub_file, 'r') as zip_ref:
